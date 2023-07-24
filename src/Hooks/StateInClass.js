@@ -5,11 +5,11 @@ class StateInClass extends Component {
     constructor(){
         super();
         this.state={
-            date: 'helloo gandu'
+            date: 'helloo'
         }
     }
     update(){
-        this.setState({date:'hello handnn'})
+        this.setState({date:'hello'})
     }
 
     render(){

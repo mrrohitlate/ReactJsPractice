@@ -2,8 +2,12 @@ import { Button } from "primereact/button"
 import React from "react"
 
 function HideShowToggle(){
-    const[status,setstatus]= React.useState(false)
+
+
+    const[status,setstatus]= React.useState(false);
+    
     return(
+        
         <>
         {
             status? <Button>hello React</Button> :null
@@ -11,6 +15,7 @@ function HideShowToggle(){
 
         <button type="text" onClick={()=>setstatus(!status)}>toggle button</button>
         
+       
         </>
     )
 }
