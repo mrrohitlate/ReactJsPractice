@@ -1,5 +1,6 @@
 import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
+import { BrowserRouter } from 'react-router-dom';
 
 
 function Navbar(){
@@ -16,7 +17,7 @@ function Navbar(){
                     items: [
                         {
                             label: 'Bookmark',
-                            icon: 'pi pi-fw pi-bookmark'
+                            icon: 'pi pi-fw pi-bookmark',
                         },
                         {
                             label: 'Video',

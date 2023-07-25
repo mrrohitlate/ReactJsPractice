@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Counter from './components/Counter';
 import Footer from './components/Footer';
 import HideShowToggle from './components/HideShowElement';
@@ -15,7 +16,7 @@ import ConditinalRendering from './Rendering/ConditonalRendering';
 
 function App() {
 
-  function setDataToChild(){
+  function setDataToChild() {
     alert("helo from app");
   }
 
@@ -26,21 +27,30 @@ function App() {
   }
   return (
     <>
-      {/* <Navbar />
-      <Mainpage />
-      <State />
-      <StateInClass /> 
-      <Props {...data} other={{addre:'delhi', Number:9954}}/>
-      <GetDataFromInputBox />
-      <HideShowToggle />
-      <Footer /> */}
-      <div className='App'>
-        {/* <Forms /> */}
-        <ConditinalRendering />
-        <Login />
-        <User dataToChild={setDataToChild}/>
-        <Counter />
-      </div>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Navbar />} />
+
+          {/* <Navbar />
+              <Mainpage />
+              <State />
+              <StateInClass />
+              <Props {...data} other={{ addre: 'delhi', Number: 9954 }} />
+              <GetDataFromInputBox />
+              <HideShowToggle />
+              <Footer />
+              <Forms />
+              <User dataToChild={setDataToChild} />
+              <Counter />
+              <ConditinalRendering />
+              <Login /> 
+              <div className='App'>   </div>   
+          */}
+
+        </Routes>
+      </BrowserRouter>
+
     </>
 
   );
